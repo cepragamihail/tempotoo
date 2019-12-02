@@ -18,7 +18,7 @@ export class LayoutComponent implements OnInit {
   },
   {
     'title': 'About',
-    'path': '/public/about'
+    'path': '/about'
   },
   {
     'title': 'Contacts',
