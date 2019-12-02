@@ -1,0 +1,82 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$my-tempotoo-primary: (
+        50 : #e4e4e4,
+        100 : #bcbcbc,
+        200 : #909090,
+        300 : #646464,
+        400 : #424242,
+        500 : #212121,
+        600 : #1d1d1d,
+        700 : #181818,
+        800 : #141414,
+        900 : #0b0b0b,
+        A100 : #e76c6c,
+        A200 : #e04040,
+        A400 : #ec0000,
+        A700 : #d30000,
+        contrast: (
+            50 : #000000,
+            100 : #000000,
+            200 : #000000,
+            300 : #ffffff,
+            400 : #ffffff,
+            500 : #ffffff,
+            600 : #ffffff,
+            700 : #ffffff,
+            800 : #ffffff,
+            900 : #ffffff,
+            A100 : #000000,
+            A200 : #ffffff,
+            A400 : #ffffff,
+            A700 : #ffffff,
+        )
+    );
+
+/* For use in src/lib/core/theming/_palette.scss */
+$my-tempotoo-accent: (
+    50 : #f1e0e0,
+    100 : #dbb3b3,
+    200 : #c38080,
+    300 : #ab4d4d,
+    400 : #992626,
+    500 : #870000,
+    600 : #7f0000,
+    700 : #740000,
+    800 : #6a0000,
+    900 : #570000,
+    A100 : #ff8989,
+    A200 : #ff5656,
+    A400 : #ff2323,
+    A700 : #ff0909,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
+//the first two are the custom palettes we declared above
+$my-theme-primary: mat-palette($my-tempotoo-primary);
+$my-theme-accent: mat-palette($my-tempotoo-accent);
+//the third, for the warn color, is the predefined material red palette
+$my-theme-warn: mat-palette($mat-red);
+ 
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
+ 
+@include angular-material-theme($my-theme);

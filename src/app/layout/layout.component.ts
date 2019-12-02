@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from "@angular/material/icon";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  title = 'TempoToo';
+
+  nav = [
+  {
+    'title': 'Home',
+    'path': '/'
+  },
+  {
+    'title': 'About',
+    'path': '/public/about'
+  },
+  {
+    'title': 'Contacts',
+    'path': '/public/contacts'
+  }
+];
+
+  constructor(
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer){
+    this.matIconRegistry.addSvgIcon(
+      "logo",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/T.svg")
+    );
+  }
 
   ngOnInit() {
   }
