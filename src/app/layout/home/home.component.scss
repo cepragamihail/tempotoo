@@ -10,4 +10,36 @@
 .ml-20 {
     margin-left: 20px;
 }
+.m-0 {
+    margin: 0px;
+}
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+.p-0{
+    padding: 0px
+}
+.pt-0{
+    padding-top: 0px
+}
+
+.card-background {
+    background-image: url("~/assets/_pasari_c.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 0px;
+}
+
+.mat-action-costum {
+    height: 50px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+.mat-header-costum {
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
 

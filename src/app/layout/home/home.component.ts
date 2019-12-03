@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.places = [
       {
-          imgSrc: '../../assets/img/category/Pasari.jpg',
+          imgSrc: '../../assets/img/category/_pasare1.jpg',
           place: 'Semne Astrologice',
           description:
               // tslint:disable-next-line:max-line-length
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
           location: 'Barcelona, Spain'
       },
       {
-          imgSrc: '../../assets/img/category/Pasari.jpg',
+          imgSrc: '../../assets/img/category/_pasare1.jpg',
           place: 'Inscriptii',
           description:
               // tslint:disable-next-line:max-line-length
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
           location: 'London, UK'
       },
       {
-          imgSrc: '../../assets/img/category/Pasari.jpg',
+          imgSrc: '../../assets/img/category/_animale.jpg',
           place: 'Animale/Natura',
           description:
               // tslint:disable-next-line:max-line-length
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       }
       ,
       {
-          imgSrc: '../../assets/img/category/Pasari.jpg',
+          imgSrc: '../../assets/img/category/_pasare1.jpg',
           place: 'Pasari/Aripi',
           description:
               // tslint:disable-next-line:max-line-length
