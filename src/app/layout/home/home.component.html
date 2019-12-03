@@ -1,7 +1,7 @@
-<div class="mb-20 mt-20 ml-20 mr-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
+<div class="mb-20 mt-20 ml-20 mr-20" fxLayout="row" fxLayout.lt-sm="column" fxFlex fxLayoutGap="15px">
     <div fxFlex *ngFor="let item of places">
             <mat-card class="p-0" [ngStyle]="{'background-image':'url(' +item.imgSrc+ ' )', 'background-position': 'center top', 'background-size': 'cover'}">
-                    <mat-card-content style="height: 250px"></mat-card-content>
+                    <mat-card-content class="mat-content-custom"></mat-card-content>
                 <mat-card-header class="mat-header-costum" fxLayout="row" fxLayoutAlign="space-evenly center" >
                     <mat-card-title class="mb-0">
                         <h3 class="m-0">{{item.place}}</h3>
@@ -21,5 +21,23 @@
             </mat-card>
     </div>
 </div>
-
+<mat-divider></mat-divider>
+<div class="mb-20 mt-20 ml-20 mr-20" fxLayout="row" fxLayout.lt-sm="column" fxFlex fxLayoutGap="20px">
+    <div fxFlex *ngFor="let item of places">
+        <mat-card>
+            <img mat-card-image [src]="item.imgSrc">
+            <mat-card-header style="justify-content: center">
+                <mat-card-title>
+                    <h3 class="m-0">{{item.place}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <button mat-button>{{item.charge}}</button>
+                <button mat-button>
+                    <mat-icon class="nav-icon">location_on</mat-icon> {{item.location}}
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
 
