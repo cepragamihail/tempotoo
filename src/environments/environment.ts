@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    apiKey: "AIzaSyBjNzdbttdkKrNTo9Q2OWXnas3CsGsG6so",
     authDomain: "tempotoo-50dcf.firebaseapp.com",
     databaseURL: "https://tempotoo-50dcf.firebaseio.com",
     projectId: "tempotoo-50dcf",
     storageBucket: "tempotoo-50dcf.appspot.com",
-    messagingSenderId: "xxxxxxxxxxxxxxxxxxxxx",
-    appId: "1:634762789330:web:xxxxxxxxxxxxxxxxxxxxxxx",
-    measurementId: "G-xxxxxxxxxxxxxxxxxxx"
+    messagingSenderId: "634762789330",
+    appId: "1:634762789330:web:f0a802255937922a2e080b",
+    measurementId: "G-1XCZZTRHNC"
   }
 };
 
