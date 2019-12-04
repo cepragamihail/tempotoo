@@ -31,11 +31,16 @@
                     <h3 class="m-0">{{item.place}}</h3>
                 </mat-card-title>
             </mat-card-header>
-            <mat-card-actions>
-                <button mat-button>{{item.charge}}</button>
-                <button mat-button>
-                    <mat-icon class="nav-icon">location_on</mat-icon> {{item.location}}
-                </button>
+            <mat-card-actions class="mat-action-costum pt-0" fxLayout="row" fxLayoutAlign="space-evenly center" >
+                <button mat-icon-button aria-label="like It">
+                    <mat-icon>favorite</mat-icon>
+                  </button>
+                  <button mat-icon-button aria-label="add to shopping_cart">
+                    <mat-icon>shopping_cart</mat-icon>
+                  </button>
+                  <button mat-icon-button aria-label="buy">
+                    <mat-icon>check_circle</mat-icon>
+                  </button>
             </mat-card-actions>
         </mat-card>
     </div>
