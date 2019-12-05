@@ -22,7 +22,12 @@ export class LayoutComponent implements OnInit {
   },
   {
     'title': 'Contacts',
-    'path': '/public/contacts'
+    'path': '/contacts'
+  }
+  ,
+  {
+    'title': 'Products',
+    'path': '/products'
   }
 ];
 

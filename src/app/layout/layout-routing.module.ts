@@ -17,11 +17,16 @@ const routes: Routes = [
         loadChildren: './about/about.module#AboutModule'
       },
       {
+        path: 'products',
+        loadChildren: './products/products.module#ProductsModule'
+      },
+      {
         path: '**',
         redirectTo: 'home'
       }
-  ]
-}];
+  ],
+}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
