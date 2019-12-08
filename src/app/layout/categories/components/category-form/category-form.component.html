@@ -1,0 +1,42 @@
+<!-- <div *ngIf="currentCategory" class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped"
+      role="progressbar" attr.aria-valuenow="{{percentage}}"
+      aria-valuemin="0" aria-valuemax="100"
+      [ngStyle]="{width:percentage+'%'}">
+      {{percentage}}%</div>
+  </div>
+   
+
+   
+  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button> -->
+    <section fxLayout="row wrap" fxLayoutAlign="center center">
+      <mat-card fxFlex="600px" fxFlex.xs="100%">
+        <mat-card-title>Create a new category</mat-card-title>
+        <form [formGroup]="categoryFormGroup" autocomplete="off" novalidate (ngSubmit)="createCategpry(categoryFormGroup.value)" fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <mat-form-field>
+                <ngx-mat-file-input (change)="selectFile($event)" formControlName="file" placeholder="Alege imagine" ></ngx-mat-file-input>
+                <mat-icon matSuffix>folder</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput type="text" id="title" formControlName="title" placeholder="Titlu">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select placeholder="Marime" formControlName="size">
+                  <mat-option value="small">Small</mat-option>
+                  <mat-option value="medium">Medium</mat-option>
+                  <mat-option value="large">Large</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput type="text" id="description" formControlName="description" placeholder="Descriere"></textarea>
+              </mat-form-field>
+              
+              <mat-progress-bar mode="determinate" value="{{percentage}}"></mat-progress-bar>
+ 
+              <mat-card-actions align="center">
+            <button mat-stroked-button color="primary" [disabled]="!categoryFormGroup.valid">Create</button>
+            <button mat-stroked-button type="button" color="warn" (click)="onCancel()">Cancel</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </section>

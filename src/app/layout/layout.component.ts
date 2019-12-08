@@ -28,7 +28,13 @@ export class LayoutComponent implements OnInit {
   {
     'title': 'Products',
     'path': '/products'
+  },
+  {
+    'title': 'Categorii',
+    'path': '/categories'
   }
+
+  
 ];
 
   constructor(

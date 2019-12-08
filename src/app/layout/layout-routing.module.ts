@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: './products/products.module#ProductsModule'
       },
       {
+        path: 'categories',
+        loadChildren: './categories/categories.module#CategoriesModule'
+      },
+      {
         path: '**',
         redirectTo: 'home'
       }

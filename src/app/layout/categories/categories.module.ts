@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from "@angular/forms";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -12,21 +13,28 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 
-import { ProductsComponent } from './products.component';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+import { CategoriesComponent } from './categories.component';
+import { CategoryFormComponent } from './components/category-form/category-form.component';
 
 const routes: Routes = [
   {
   path: '',
-  component: ProductsComponent,
+  component: CategoriesComponent,
   pathMatch: 'full'
-  }
+  },
+  { 
+    path: 'create', 
+    component: CategoryFormComponent 
+  },
 ]
 
 @NgModule({
-  declarations: [ProductsComponent],
+  declarations: [ CategoryFormComponent, CategoriesComponent, CategoryDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FlexLayoutModule,
     ReactiveFormsModule,
     MatSelectModule,
     MatInputModule,
@@ -39,4 +47,4 @@ const routes: Routes = [
     MatProgressBarModule
   ]
 })
-export class ProductsModule { }
+export class CategoriesModule { }
