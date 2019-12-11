@@ -13,17 +13,22 @@ import { MatTableModule } from '@angular/material/table';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 import { ProductsComponent } from './products.component';
+import { BuyProductComponent } from './components/buy-product/buy-product.component';
 
 const routes: Routes = [
   {
   path: '',
   component: ProductsComponent,
   pathMatch: 'full'
-  }
+  },
+  {
+    path: 'by-product',
+    component: BuyProductComponent,
+    }
 ]
 
 @NgModule({
-  declarations: [ProductsComponent],
+  declarations: [ProductsComponent, BuyProductComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

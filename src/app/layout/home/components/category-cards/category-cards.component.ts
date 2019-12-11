@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-category-cards',
+  templateUrl: './category-cards.component.html',
+  styleUrls: ['./category-cards.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CategoryCardsComponent implements OnInit {
 
   places: Array<any> = [];
 
@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.places = [
       {
-          imgSrc: '../../assets/img/category/_pasare1.jpg',
-          title: 'Semne Astrologice',
+          imgSrc: '../../assets/img/category/categorie-animale.jpg',
+          title: 'Animale',
           description:
               // tslint:disable-next-line:max-line-length
               'The title is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.',
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
           location: 'Barcelona, Spain'
       },
       {
-          imgSrc: '../../assets/img/category/_pasare1.jpg',
+          imgSrc: '../../assets/img/category/categorie-inscriptie.jpg',
           title: 'Inscriptii',
           description:
               // tslint:disable-next-line:max-line-length
@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
           location: 'London, UK'
       },
       {
-          imgSrc: '../../assets/img/category/_animale.jpg',
-          title: 'Animale/Natura',
+          imgSrc: '../../assets/img/category/categorie-pasare.jpg',
+          title: 'Pasari/Aripi',
           description:
               // tslint:disable-next-line:max-line-length
               'The title is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.',
@@ -42,8 +42,8 @@ export class HomeComponent implements OnInit {
       }
       ,
       {
-          imgSrc: '../../assets/img/category/_pasare1.jpg',
-          title: 'Pasari/Aripi',
+          imgSrc: '../../assets/img/category/categorie-altele.jpg',
+          title: 'Altele',
           description:
               // tslint:disable-next-line:max-line-length
               'The title is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.',
@@ -53,5 +53,9 @@ export class HomeComponent implements OnInit {
   ];
 
   }
+
+  onCardClick($event) {
+    console.log($event);
+   }
 
 }

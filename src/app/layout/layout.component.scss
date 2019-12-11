@@ -19,3 +19,12 @@
   bottom: 0;
   padding: 20px;
 }
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

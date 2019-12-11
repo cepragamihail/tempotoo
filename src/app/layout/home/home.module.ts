@@ -7,7 +7,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+
 import { HomeComponent } from './home.component';
+import { CategoryCardsComponent } from './components/category-cards/category-cards.component';
+import { MatRippleModule } from '@angular/material';
+import { PopularProductsCardsComponent } from './components/popular-products-cards/popular-products-cards.component';
 
 const routes: Routes = [
   {
@@ -17,7 +21,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, CategoryCardsComponent, PopularProductsCardsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -26,6 +30,7 @@ const routes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatDividerModule,
+    MatRippleModule,
     FormsModule
   ]
 })

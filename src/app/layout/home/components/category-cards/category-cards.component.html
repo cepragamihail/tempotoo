@@ -1,0 +1,10 @@
+<div class="m-20" fxLayout="row wrap" fxLayout.lt-sm="column" fxFlex fxLayoutGap="20px grid">
+    <div fxFlex fxFlex.sm="50" *ngFor="let item of places">
+        <mat-card (click)="onCardClick($event)" matRipple class="clickable card-max-width" ngStyle.md="min-width: 300px;">
+              <h2 class="category-card-title">{{item.title}}</h2>
+            <img mat-card-image [src]="item.imgSrc" alt="item.title" class="category-card-image">
+            <mat-card-footer>
+              </mat-card-footer>
+          </mat-card>
+    </div>
+</div>
