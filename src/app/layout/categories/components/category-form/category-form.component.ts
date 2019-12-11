@@ -32,36 +32,10 @@ export class CategoryFormComponent implements OnInit {
     });
   }
 
-  // categoryObject.file.name
-
-  // key: string;
-  // name: string;
-  // title: string;
-  // description: string;
-  // size: string;
-  // url: string;
-  // file: File;
-
 
   selectFile(event) {
     this.selectedFiles = event.target.files;
   }
-
-  // upload() {
-  //   const file = this.selectedFiles.item(0);
-  //   this.selectedFiles = undefined;
-
-  //   this.currentCategory = new Category(file);
-  //   this.categoryService.pushCategoryToStorage(this.currentCategory).subscribe(
-  //     (percentage: number) => {
-  //       this.percentage = Math.round(percentage);
-  //     },
-  //     (error: any) => {
-  //       console.log(error);
-  //     }
-  //   );
-  // }
-  // pushCategoryToStorage(categoryObject: Category): Observable<number> {
 
   public createCategpry = (categoryFormValue) => {
     if (this.categoryFormGroup.valid) {
