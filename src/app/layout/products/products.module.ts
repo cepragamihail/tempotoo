@@ -15,6 +15,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 import { ProductsComponent } from './products.component';
 import { BuyProductComponent } from './components/buy-product/buy-product.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [ProductsComponent, BuyProductComponent],
+  declarations: [ProductsComponent, BuyProductComponent, ProductFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
