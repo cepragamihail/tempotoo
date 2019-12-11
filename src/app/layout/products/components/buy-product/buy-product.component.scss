@@ -1,0 +1,29 @@
+#content {
+    position: relative;
+    min-height: calc(100vh - 40px) !important;
+    padding-left: 16px !important;
+  }
+  #content-body {
+    height: 100%;
+    margin-bottom: 45px;
+  }
+  #content-footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+      height: 40px;
+      margin-left: 16px;
+      margin-bottom: 5px;
+  }
+  .pb-0 {
+    padding-bottom: 0 !important;
+  }
+.side-img {
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom-left-radius: 4px !important;
+}
+.fw-bl {
+    font-weight: bolder !important;
+}

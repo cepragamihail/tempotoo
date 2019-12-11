@@ -1,19 +1,41 @@
-<div 
-  gdAreas="header header | side content | footer footer"
-  gdGap="16px"
-  gdRows="auto auto auto">
-  <div gdArea="header">
-    Header
-   </div>
-  <div gdArea="side">
-    Side
-   </div>
-  <div gdArea="content">
-    Content
-  </div>
-  <div gdArea="footer">
-    Footer
-  </div>
-</div>
+<div fxLayout="row" fxLayoutAlign="space-around center" style="margin: 20px;" >
+  <mat-card 
+  class="pb-0"
+  gdAreas="header header | side content"
 
-<p>buy-product works!</p>
+  gdRows="auto auto auto"
+  gdAreas.lt-md="header | side | content"
+  gdRows.lt-md="auto auto auto auto">
+    
+    <mat-card-header style="justify-content: center" gdArea="header">
+        <mat-card-title>
+            <h1 class="m-0 mat-h1 fw-bl">{{item.title}}</h1>
+        </mat-card-title>
+    </mat-card-header>    
+    <img gdArea="side" mat-card-image [src]="item.imgSrc" (click)="onCardClick($event)" matRipple class="side-img">
+    <mat-card-content gdArea="content" fxLayout="column" fxLayoutAlign="center none" id="content">
+      <div id="content-body">
+          <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center" id="content-footer">
+        <button mat-icon-button aria-label="like It">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="add to shopping_cart">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="buy">
+          <mat-icon>check_circle</mat-icon>
+        </button>
+      </div>
+      
+    </mat-card-content>
+    <!-- <mat-card-actions gdArea="footer"  >
+        
+    </mat-card-actions> -->
+</mat-card>
+</div>
