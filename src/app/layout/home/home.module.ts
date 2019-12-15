@@ -12,6 +12,7 @@ import { HomeComponent } from './home.component';
 import { CategoryCardsComponent } from './components/category-cards/category-cards.component';
 import { MatRippleModule } from '@angular/material';
 import { PopularProductsCardsComponent } from './components/popular-products-cards/popular-products-cards.component';
+import { ProductsComponent } from '../products/products.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent, CategoryCardsComponent, PopularProductsCardsComponent],
+  declarations: [HomeComponent, CategoryCardsComponent, PopularProductsCardsComponent, ProductsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

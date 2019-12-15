@@ -10,7 +10,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class CategoryService {
 
-  private basePath = '/categorues';
+  private basePath = '/categories';
  
 constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) { }
  
@@ -22,7 +22,6 @@ pushCategoryToStorage(categoryObject: Category): Observable<number> {
   uploadTask.snapshotChanges().pipe(
     finalize(() => {
       storageRef.getDownloadURL().subscribe(downloadURL => {
-        console.log('File available at', downloadURL);
         categoryObject.url = downloadURL;
         categoryObject.name = categoryObject.file.name;
         this.saveCategoryData(categoryObject);

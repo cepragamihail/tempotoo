@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../services/category.service';
 import { Category } from '../../entities/category';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Location } from '@angular/common';
 
 @Component({
@@ -19,11 +19,12 @@ export class CategoryFormComponent implements OnInit {
 
   constructor(
     private location: Location, 
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private formBuilder: FormBuilder
     ) { }
 
   ngOnInit() {
-    this.categoryFormGroup = new FormGroup({
+    this.categoryFormGroup = this.formBuilder.group({
       file: new FormControl(null, [Validators.required]),
       title: new FormControl('', [Validators.required, Validators.maxLength(60)]),
       description: new FormControl('', [Validators.maxLength(250)]),
@@ -45,7 +46,7 @@ export class CategoryFormComponent implements OnInit {
   
   public executeCategoryCreation = (categoryFormValue) => {
 
-    this.currentCategory.file = this.selectedFiles.item(0);
+    this.currentCategory =  new Category(this.selectedFiles.item(0));
     this.currentCategory.title = categoryFormValue.title;
     this.currentCategory.size = categoryFormValue.size;
     this.currentCategory.description = categoryFormValue.description;

@@ -1,6 +1,7 @@
 export class Product {
     key: string;
     name: string;
+    title: string;
     code: string;
     description: string;
     note: string;
@@ -10,5 +11,7 @@ export class Product {
     url: string;
     file: File;
 
-    constructor() {}
+    constructor( file: File) {
+        this.file = file;
+    }
 }

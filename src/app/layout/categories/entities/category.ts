@@ -8,5 +8,7 @@ export class Category {
     url: string;
     file: File;
 
-    constructor() {}
+    constructor(file: File) {
+        this.file = file;
+    }
 }

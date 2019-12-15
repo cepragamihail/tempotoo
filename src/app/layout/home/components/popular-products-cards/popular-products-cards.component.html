@@ -1,7 +1,7 @@
 <div class="m-20" fxLayout="row wrap" fxLayout.lt-sm="column" fxFlex fxLayoutGap="20px grid">
-    <div fxFlex fxFlex.gt-md="20" fxFlex.sm="50" *ngFor="let item of places">
+    <div fxFlex fxFlex.gt-md="20" fxFlex.sm="50" *ngFor="let item of products">
           <mat-card class="card-max-width" ngStyle.md="min-width: 300px;">
-            <img mat-card-image [src]="item.imgSrc" (click)="onCardClick($event)" matRipple class="clickable">
+            <img mat-card-image [src]="item.url" (click)="onCardClick($event)" matRipple class="clickable">
             <mat-card-header style="justify-content: center">
                 <mat-card-title>
                     <h3 class="m-0 mat-h2">{{item.title}}</h3>

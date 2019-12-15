@@ -13,24 +13,35 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 
+
 import { ProductsComponent } from './products.component';
 import { BuyProductComponent } from './components/buy-product/buy-product.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 
 const routes: Routes = [
   {
-  path: '',
-  component: ProductsComponent,
-  pathMatch: 'full'
+    path: '',
+    component: ProductsComponent,
+    pathMatch: 'full'
   },
   {
     path: 'by-product',
     component: BuyProductComponent,
-    }
+  },
+  {
+    path: 'products_details',
+    component: ProductsDetailsComponent,
+  },
+  {
+    path: 'product_form',
+    component: ProductFormComponent,
+  }
+
 ]
 
 @NgModule({
-  declarations: [ProductsComponent, BuyProductComponent, ProductFormComponent],
+  declarations: [ProductsComponent, BuyProductComponent, ProductFormComponent, ProductsDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

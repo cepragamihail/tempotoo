@@ -1,1 +1,35 @@
-<p>product-form works!</p>
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="600px" fxFlex.xs="100%">
+      <mat-card-title>Add a new Product</mat-card-title>
+      <form [formGroup]="productFormGroup" autocomplete="off" novalidate (ngSubmit)="createProduct(productFormGroup.value)" fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+          <mat-form-field>
+              <ngx-mat-file-input (change)="selectFile($event)" formControlName="file" placeholder="Alege imagine" ></ngx-mat-file-input>
+              <mat-icon matSuffix>folder</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" id="title" formControlName="title" placeholder="Titlu">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" id="code" formControlName="code" placeholder="Code">
+              </mat-form-field>
+            <mat-form-field>
+              <textarea matInput type="text" id="description" formControlName="description" placeholder="Descriere"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Categorie</mat-label>
+              <mat-select formControlName="categories" multiple>
+                <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" id="tags" formControlName="tags" placeholder="Taguri">
+            </mat-form-field>
+            <mat-progress-bar mode="determinate" value="{{percentage}}"></mat-progress-bar>
+
+            <mat-card-actions align="center">
+          <button mat-stroked-button color="primary" [disabled]="!productFormGroup.valid">Create</button>
+          <button mat-stroked-button type="button" color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </section>
